@@ -1,4 +1,5 @@
 import { MigrationInterface, QueryRunner } from 'typeorm';
+import { Table } from 'typeorm/schema-builder/table/Table';
 
 export class createCategorias1643743095761 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
@@ -14,33 +15,9 @@ export class createCategorias1643743095761 implements MigrationInterface {
             default: 'uuid_generate_v4()',
           },
           {
-            name: 'name',
+            name: 'nome',
             type: 'varchar',
-          },
-          {
-            name: 'cpf_cnpj',
-            type: 'varchar',
-          },
-          {
-            name: 'email',
-            type: 'varchar',
-          },
-          {
-            name: 'telefone',
-            type: 'varchar',
-          },
-          {
-            name: 'tipo',
-            type: 'varchar',
-          },
-          {
-            name: 'senha',
-            type: 'varchar',
-          },
-          {
-            name: 'imagam_path',
-            type: 'varchar',
-          },
+          },    
           {
             name: 'criado',
             type: 'timestamp',
@@ -50,7 +27,7 @@ export class createCategorias1643743095761 implements MigrationInterface {
             name: 'alterado',
             type: 'timestamp',
             default: 'now()',
-          },
+          },   
         ],
       }),
     );
